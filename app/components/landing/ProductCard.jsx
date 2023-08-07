@@ -6,7 +6,10 @@ import { useRouter } from 'next/navigation'
 const ProductCard = ({product}) => {
   const route = useRouter()
   return (
-    <div className = 'border p-5 space-y-3'>
+    <div className = 'relative border p-5 space-y-3'>
+        <button onClick = {() => route.push(`/products/${product.id}`)} className="absolute top-3 right-1 sm:hidden rounded-md text-gray-900 px-3 py-2font-medium">
+                <Eye />
+        </button>
         <div className="w-full h-52 flex items-center justify-center">
             <Image src = {product.image} width={125} height={125} objectFit="cover" alt = {product.title} />
         </div>
@@ -21,9 +24,9 @@ const ProductCard = ({product}) => {
                 </p>
             </div>
         </div>
-        <div className="flex items-center space-x-3">
+        <div className="flex flex-col sm:flex-row items-center space-x-3">
             <Button text={'Add to cart'} className = 'flex-1'/>
-            <button onClick = {() => route.push(`/products/${product.id}`)} className="rounded-md text-gray-900 px-3 py-2 bg-gray-50 font-medium">
+            <button onClick = {() => route.push(`/products/${product.id}`)} className="hidden sm:block rounded-md text-gray-900 px-3 py-2 bg-gray-50 font-medium">
                 <Eye />
             </button>
         </div>

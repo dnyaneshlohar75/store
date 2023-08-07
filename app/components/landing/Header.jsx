@@ -19,7 +19,7 @@ const Header = () => {
                 <Link href = '/wishlist'>
                   <Heart />
                 </Link>
-                <Link href = '' className='relative cursor-pointer text-gray-950 dark:text-gray-50'>
+                <Link href = '/checkout' className='relative cursor-pointer text-gray-950 dark:text-gray-50'>
                   <span className='absolute -top-2 -right-2 text-xs bg-gray-700 py-[2px] px-[6px] text-white rounded-full'>0</span>
                   <ShoppingCart />
                 </Link>
