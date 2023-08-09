@@ -3,6 +3,7 @@ import Button from "@/app/components/Button";
 import { Check, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import Currency from 'currency-formatter'
 
 const Products = ({params}) => {
   const [product, setProduct] = React.useState({})
@@ -26,7 +27,7 @@ const Products = ({params}) => {
                     <p className="text-sm text-gray-500">{product?.category}</p>
                     <h1 className="font-bold sm:text-xl md:text-3xl">{product?.title}</h1>
                     <div className="text-xs md:text-base flex items-center gap-3">
-                        <p>${product.price}</p>
+                        <p>{Currency.format(product.price, {code: 'INR'})}</p>
                         <div className="w-[2px] bg-gray-400 h-5" />
                         <p>{product?.rating?.rate} rating</p>
                         <p>{product?.rating?.count} reviews</p>
@@ -37,7 +38,7 @@ const Products = ({params}) => {
                     </div>
                 </div>
                 <div className="space-y-3 flex flex-col items-center ">
-                    <Button text={'Add to cart'} />
+                    <Button text={'Add to cart'} product={product}/>
                     <Link href = '' className="text-xs md:text-base flex items-center gap-5 text-gray-600 hover:text-gray-800"><ShieldCheck /> Lifetime Guarantee</Link>
                 </div>
             </div>

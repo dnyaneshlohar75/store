@@ -4,7 +4,7 @@ import { Gem, Menu, Plug, Shirt } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <div className="py-3 hidden sm:flex items-center space-x-5 text-sm md:text-md lg:text-lg">
+    <div className="py-3 hidden sm:flex items-center space-x-5 text-sm md:text-base">
       <Link href="/" className="flex items-center space-x-2 dark:text-gray-50 text-gray-600 hover:text-gray-950">
         <Menu />
         <span>All Products</span>

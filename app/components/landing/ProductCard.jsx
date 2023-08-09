@@ -2,9 +2,11 @@ import Image from "next/image";
 import Button from "../Button";
 import { Eye, Heart } from "lucide-react";
 import { useRouter } from 'next/navigation'
+import Currency from 'currency-formatter'
 
 const ProductCard = ({product}) => {
   const route = useRouter()
+
   return (
     <div className = 'relative border p-5 space-y-3'>
         <button onClick = {() => route.push(`/products/${product.id}`)} className="absolute top-3 right-1 sm:hidden rounded-md text-gray-900 px-3 py-2font-medium">
@@ -20,12 +22,12 @@ const ProductCard = ({product}) => {
             </div>
             <div>
                 <p className="text-xs font-medium sm:text-xl">
-                    ${product.price.toLocaleString({style: 'currency', currency: 'INR'})}
+                    {Currency.format(product.price, {code: 'INR'})}
                 </p>
             </div>
         </div>
         <div className="flex flex-col sm:flex-row items-center space-x-3">
-            <Button text={'Add to cart'} className = 'flex-1'/>
+            <Button text={'Add to cart'} product={product} />
             <button onClick = {() => route.push(`/products/${product.id}`)} className="hidden sm:block rounded-md text-gray-900 px-3 py-2 bg-gray-50 font-medium">
                 <Eye />
             </button>
