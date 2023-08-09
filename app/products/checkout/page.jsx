@@ -21,7 +21,7 @@ const Checkout = () => {
               <h1 className="text-2xl font-semibold pb-3">Your Cart</h1>
               <div className="">
                 {items.map((item) => (
-                  <CheckoutItem product={item} />
+                  <CheckoutItem key={item.id} product={item} />
                 ))}
               </div>
             </div>
