@@ -14,7 +14,6 @@ const Products = () => {
       const products = await api.json();
       setProducts(products);
     };
-
     getProducts();
   }, []);
 
