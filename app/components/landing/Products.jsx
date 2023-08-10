@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import Image from "next/image";
-import wideBanner from '../../../public/banner_6.jpg'
-import squareBanner from '../../../public/banner_7.jpg'
+import wideBanner from '../../../public/banner_6.JPG'
+import squareBanner from '../../../public/banner_7.JPG'
+
 const Products = () => {
   const [products, setProducts] = useState([]);
 
