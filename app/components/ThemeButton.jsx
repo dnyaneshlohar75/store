@@ -8,7 +8,7 @@ const ThemeButton = () => {
   
   return (
     <button onClick={() => resolvedTheme == "dark" ? setTheme("light") : setTheme("dark")}>
-      {resolvedTheme === "dark" ? <Sun /> : <Moon />}
+      {resolvedTheme === "dark" ? <Sun size = {20} /> : <Moon size = {20} />}
     </button>
   );
 };

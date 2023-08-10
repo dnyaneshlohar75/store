@@ -2,7 +2,9 @@ import React from 'react'
 
 const Wishlist = () => {
   return (
-    <div>Wishlist</div>
+    <div className='px-5 py-3 w-full'>
+      Wishlist
+    </div>
   )
 }
 

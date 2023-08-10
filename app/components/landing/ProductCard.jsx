@@ -8,7 +8,7 @@ const ProductCard = ({product}) => {
   const route = useRouter()
 
   return (
-    <div className = 'relative border p-5 space-y-3'>
+    <div className = 'bg-white relative border p-5 space-y-3'>
         <button onClick = {() => route.push(`/products/${product.id}`)} className="absolute top-3 right-1 sm:hidden rounded-md text-gray-900 px-3 py-2font-medium">
                 <Eye />
         </button>
@@ -17,11 +17,11 @@ const ProductCard = ({product}) => {
         </div>
         <div className="space-y-3">
             <div className="space-y-3">
-                <h1 className="text-xs truncate font-semibold sm:text-lg">{product.title}</h1>
+                <h1 className="dark:text-gray-950 text-xs truncate font-semibold sm:text-lg">{product.title}</h1>
                 <p className="text-xs sm:text-sm line-clamp-3 text-gray-700">{product.description}</p>
             </div>
             <div>
-                <p className="text-xs font-medium sm:text-xl">
+                <p className="text-xs font-medium sm:text-xl dark:text-gray-950">
                     {Currency.format(product.price, {code: 'INR'})}
                 </p>
             </div>

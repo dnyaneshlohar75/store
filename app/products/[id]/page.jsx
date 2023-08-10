@@ -17,7 +17,7 @@ const Products = ({params}) => {
     getData()
   }, []);
   return (
-    <section className='dark:bg-slate-950 px-5 py-3 w-full'>
+    <section className='dark:bg-black px-5 py-3 w-full'>
         <div className="flex flex-col sm:flex-row items-center h-[22rem] md:h-[30rem] gap-8 md:gap-36 max-w-5xl m-auto">
             <div className="w-full sm:w-56 h-56 md:w-80 md:h-80">
                 <img src={product?.image} className="w-full h-full object-contain" alt={product.title} />
