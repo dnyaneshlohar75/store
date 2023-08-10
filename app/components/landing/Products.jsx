@@ -28,14 +28,14 @@ const Products = () => {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5">
           <div className="col-span-2 w-full h-full overflow-hidden">
-            <Image src={banner} alt="" className="h-full w-full object-cover" />
+            <Image src={banner} alt="" objectFit='cover' className="h-full w-full" />
           </div>
           {products.slice(8, 14).map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
         <div>
-          <Image src = {wideBanner} alt="" className="h-full w-full object-cover" />
+          <Image src = {wideBanner} objectFit='cover' alt="" className="h-full w-full" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5">
           {products?.slice(4, 8).map((product) => (
