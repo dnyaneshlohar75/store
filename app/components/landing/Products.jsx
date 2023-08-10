@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-  const banner = require('@/public/banner-7.jpg')
-  const wideBanner = require('@/public/banner-6.jpg')
+  const banner = require('../../../public/banner-7.jpg')
+  const wideBanner = require('../../../public/banner-6.jpg')
   useEffect(() => {
     const getProducts = async () => {
       const api = await fetch("https://fakestoreapi.com/products/");
