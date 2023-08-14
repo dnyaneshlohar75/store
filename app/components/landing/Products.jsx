@@ -34,8 +34,7 @@ const Products = () => {
               height={1200}
               style={{maxWidth: '100%', height: '100%', objectFit: 'cover'}}
               alt="banner-7"
-              objectFit="cover"
-              className="h-full w-full"
+              className="h-full w-full object-cover"
             />
           </div>
           {products.slice(8, 14).map((product) => (
